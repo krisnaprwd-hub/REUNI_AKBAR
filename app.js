@@ -53,8 +53,8 @@ function validate() {
     setError("name", "Masukkan nama lengkap.");
     valid = false;
   }
-  if (!/^20\d{2}$/.test(year) && !/^19\d{2}$/.test(year)) {
-    setError("graduationYear", "Masukkan tahun angkatan yang valid.");
+  if (!year) {
+    setError("graduationYear", "Pilih angkatan Anda.");
     valid = false;
   }
   if (!/^\d{8,13}$/.test(phone.replace(/^0/, ""))) {
