@@ -11,10 +11,11 @@
  * 8. Klik Deploy dan salin Web app URL ke config.js.
  */
 
+const SPREADSHEET_ID = "19a0MlgUaVGv8Eb0RYL-QfRae8OUQeXg8Cno-JEjf-k";
 const SHEET_NAME = "Peserta Reuni";
 
 function ensureSheet() {
-  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
   let sheet = spreadsheet.getSheetByName(SHEET_NAME);
 
   if (!sheet) {
