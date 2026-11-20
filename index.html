@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f3eb">
+  <title>Reuni Akbar - Registrasi Peserta</title>
+  <meta name="description" content="Formulir registrasi peserta Reuni Akbar">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero" aria-labelledby="event-title">
+      <div class="brand-mark" aria-hidden="true">
+        <span>RA</span>
+      </div>
+      <p class="eyebrow">Registrasi Peserta</p>
+      <h1 id="event-title">Reuni Akbar</h1>
+      <p class="event-meta">Bertemu kembali, kenangan tetap hidup.</p>
+    </section>
+
+    <section class="form-section" aria-label="Form registrasi">
+      <form id="registrationForm" novalidate>
+        <div class="field">
+          <label for="name">Nama lengkap</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Contoh: Ahmad Fauzi" required>
+          <p class="error" id="nameError"></p>
+        </div>
+
+        <div class="field">
+          <label for="graduationYear">Angkatan</label>
+          <input id="graduationYear" name="graduationYear" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 2008" maxlength="4" required>
+          <p class="error" id="graduationYearError"></p>
+        </div>
+
+        <div class="field">
+          <label for="phone">Nomor HP</label>
+          <div class="phone-input">
+            <span>+62</span>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="81234567890" required>
+          </div>
+          <p class="error" id="phoneError"></p>
+        </div>
+
+        <label class="consent">
+          <input id="consent" name="consent" type="checkbox">
+          <span>Saya setuju data digunakan untuk keperluan reuni.</span>
+        </label>
+
+        <button class="submit-button" type="submit">
+          <span>Daftar Sekarang</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </button>
+      </form>
+
+      <p class="privacy-note">Data hanya digunakan untuk pendaftaran reuni.</p>
+    </section>
+  </main>
+
+  <dialog id="successDialog" class="success-dialog">
+    <div class="success-icon" aria-hidden="true">&#10003;</div>
+    <p class="dialog-kicker">Pendaftaran berhasil</p>
+    <h2>Nomor Undian Anda</h2>
+    <div class="raffle-number" id="raffleNumber">RA-0000</div>
+    <p class="dialog-message" id="dialogMessage">Simpan nomor ini untuk doorprize.</p>
+    <div class="dialog-actions">
+      <a id="whatsappLink" class="whatsapp-button" href="#" target="_blank" rel="noopener">
+        Kirim ke WhatsApp
+</a>
+      <button id="closeDialog" class="close-button" type="button">Tutup</button>
+    </div>
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
