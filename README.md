@@ -30,7 +30,9 @@ Buka `http://localhost:4173`.
 
 ## Penyimpanan ke Google Sheets
 
-Buka `config.js` dan isi `googleScriptUrl` dengan URL Web App dari Google Apps Script. Apps Script dapat menyimpan data ke spreadsheet dan dapat dikembangkan untuk mengirim nomor undian melalui WhatsApp API resmi.
+Buka `config.js` dan isi `googleScriptUrl` dengan URL Web App dari Google Apps Script.
 
-Catatan: form saat ini menyimpan data peserta ke `localStorage` browser. Penyimpanan tersebut bersifat lokal pada perangkat yang membuka halaman dan bukan database bersama.
+Ikuti template dan instruksi pada `google-apps-script.js` untuk membuat database spreadsheet bersama.
+
+Catatan: selama URL belum diisi, form menyimpan data peserta ke `localStorage` browser. Penyimpanan tersebut bersifat lokal pada perangkat yang membuka halaman dan bukan database bersama.
 
